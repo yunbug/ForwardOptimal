@@ -1,0 +1,2 @@
+# ForwardOptimal
+ForwardOptimal是一个TCP转发工具，它可以TCP转发多个目录，在首次启动后会对所有目标列表进行延迟检测，找出最佳最优选的IP目标，并对最优的目标进行TCP转发

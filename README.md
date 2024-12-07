@@ -79,12 +79,14 @@ cat > /etc/ForwardOptimal/config.json << EOF
 EOF
 ```
 
+此时只需要修好好json文件后，直接 /etc/ForwardOptimal/ForwardOptimal  即可运行
+下面是一些简单的守护
 
 #### 进程守护
 
-```
 #(可选)curl -o /etc/systemd/system/ForwardOptimal.service https://github.com/yunbug/ForwardOptimal/blob/main/ForwardOptimal.service
 
+```
 echo ' 
 [Unit]
 Description=ForwardOptimal TCP
@@ -107,15 +109,13 @@ RestartSec=10
 [Install]
 WantedBy=multi-user.target
 ' >/etc/systemd/system/ForwardOptimal.service
-
-
-
+```
 sudo systemctl daemon-reload
 
 sudo systemctl start ForwardOptimal.service
 
 sudo systemctl status ForwardOptimal.service
-```
+
 
 
 #### 设置开机自启

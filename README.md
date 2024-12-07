@@ -9,7 +9,7 @@ ForwardOptimal是一个TCP转发工具，它可以TCP转发多个目录，在首
 
 
 
-使用：
+## 使用：
 
 改 config.json文件,改成你需要转发的目标
 然后 ./tcp 即可运行
@@ -20,7 +20,7 @@ targets 下面的是目标
 updateInterval 是每隔多久执行一次延迟检查（重新寻找最佳延迟的目标）
 updateInterval 不建议修改太小
 
-
+```
 {
   "bindAddr": ":55555",
   "targets": [
@@ -30,7 +30,7 @@ updateInterval 不建议修改太小
   ],
    "updateInterval": 60
 }
-
+```
 
 
 

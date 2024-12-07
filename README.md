@@ -8,7 +8,9 @@ ForwardOptimal是一个TCP转发工具，在首次启动后会对所有目标列
 
 
 ## 介绍：
-   ForwardOptimal 只是一个 TCP转发工具 ，它不支持负载均衡，也不支轮训转发 ， 它的唯一功能便是在 一堆IP中找出延迟最低的IP进行TCP转发，仅此而已！
+   ForwardOptimal 只是一个 TCP转发工具 ，
+   ### 它的唯一功能便是在 一堆IP中找出延迟最低的IP进行TCP转发，仅此而已！
+   
 
 
 

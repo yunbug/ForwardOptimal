@@ -63,7 +63,7 @@ curl -o /etc/ForwardOptimal/ForwardOptimal https://github.com/yunbug/ForwardOpti
 ```
 #### 编写json文件
 ```
-cat > /etc/ak_monitor/client.json << EOF
+cat > /etc/ForwardOptimal/config.json << EOF
 {
   "bindAddr": ":55555",
   "targets": [

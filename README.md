@@ -48,3 +48,26 @@ OK，到这里将结束了，再次提醒，它不支持轮训和负载均衡，
 
 Releases 中的是 二进制文件，AMD架构的，其他架构自行编译
 ！！！
+
+
+
+
+## 补充 快速使用：
+
+#### 下载
+
+mkdir /etc/ForwardOptimal/
+curl -o /etc/ForwardOptimal/ForwardOptimal https://github.com/yunbug/ForwardOptimal/releases/download/ForwardOptimal/ForwardOptimal
+
+#### 进程守护
+curl -o /etc/systemd/system/ForwardOptimal.service https://github.com/yunbug/ForwardOptimal/blob/main/ForwardOptimal.service
+
+sudo systemctl daemon-reload
+
+sudo systemctl start ForwardOptimal.service
+
+sudo systemctl status ForwardOptimal.service
+
+#### 设置开机自启
+systemctl enable ForwardOptimal
+

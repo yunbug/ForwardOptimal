@@ -63,7 +63,7 @@ Releases 中的是 二进制文件，AMD架构的，其他架构自行编译
 
 ```
 mkdir /etc/ForwardOptimal/
-curl -o /etc/ForwardOptimal/ForwardOptimal https://github.com/yunbug/ForwardOptimal/releases/download/ForwardOptimal/ForwardOptimal
+curl -o /etc/ForwardOptimal/ForwardOptimal [https://github.com/yunbug/ForwardOptimal/releases/download/ForwardOptimal/ForwardOptimal](https://github.com/yunbug/ForwardOptimal/releases/download/v1.2.0/ForwardOptimal)
 chmod 777 /etc/ForwardOptimal/ForwardOptimal
 ```
 

@@ -17,27 +17,27 @@ ForwardOptimal是一个TCP转发工具，在首次启动后会对所有目标列
 
 
 ## 使用：
+### 运行方法：
+   ./ForwardOptimal [您的文件路径]
+   例子 ： ./ForwardOptimal /etc/ForwardOptimal/config.json
 
-改 config.json文件,改成你需要转发的目标
-然后 ./tcp 即可运行
+   如果不设置路径，那么默认会使用config.json
+   
+### 配置文件：
+#### config.json文件 简单介绍
 
-bindAddr 是绑定的端口
-targets 下面的是目标
+
+bindAddr 是绑定的端口（可以设置为[::] 或 0.0.0.0 这个不用多说了）
+
+targets 转发列表目标
 
 updateInterval 是每隔多久执行一次延迟检查（重新寻找最佳延迟的目标）
-updateInterval 不建议修改太小
+##### updateInterval 不建议修改太小
 
-```
-{
-  "bindAddr": ":55555",
-  "targets": [
-    "[2a00:0000:1234:1::a]:65535",
-    "1.1.1.1:80",
-    "6.6.6.6:22"
-  ],
-   "updateInterval": 60
-}
-```
+"enableProxyProtocol": false
+##### enableProxyProtocol 是 ProxyProtocol v2 是否开启，默认为 false ,禁用 ProxyProtocol 协议
+如需要开启直接设置true即可，不懂不要管，它必须对端能接受，不然无用！！！
+
 
 
 
@@ -47,6 +47,8 @@ OK，到这里将结束了，再次提醒，它不支持轮训和负载均衡，
 需要注意的是，如果在运行中途 最优IP目标宕机了，那么转发将会无效，只能等到程序下一次延迟检查。
 
 Releases 中的是 二进制文件，AMD架构的，其他架构自行编译
+
+这只是一个很简单的转发工具，并没有所谓的那么强大高性能，甚至如果你是有几百个转发目标，我不并推荐你使用，它是逐行检查延迟，而不是异步多线程之类的！
 ！！！
 
 
@@ -64,23 +66,27 @@ mkdir /etc/ForwardOptimal/
 curl -o /etc/ForwardOptimal/ForwardOptimal https://github.com/yunbug/ForwardOptimal/releases/download/ForwardOptimal/ForwardOptimal
 chmod 777 /etc/ForwardOptimal/ForwardOptimal
 ```
+
 #### 编写json文件
 ```
 cat > /etc/ForwardOptimal/config.json << EOF
 {
-  "bindAddr": ":55555",
+  "bindAddr": "[::]:55555",
   "targets": [
     "1.1.1.1:80",
     "6.6.6.6:22",
     "[2a00:0000:1234:1::a]:65535",
     "[2a00:1111:6666:1::1111]:80"
   ],
-   "updateInterval": 60
+   "updateInterval": 60，
+   "enableProxyProtocol": false
 } 
 EOF
 ```
 
-此时只需要修好好json文件后，直接 /etc/ForwardOptimal/ForwardOptimal  即可运行
+此时只需要修好好json文件后
+直接 /etc/ForwardOptimal/ForwardOptimal  即可运行
+或指定目录，/etc/ForwardOptimal/ForwardOptimal /etc/ForwardOptimal/config.json 运行
 下面是一些简单的守护
 
 #### 进程守护

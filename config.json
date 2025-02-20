@@ -5,7 +5,8 @@
     "1.1.1.1:80",
     "6.6.6.6:22"
   ],
-   "updateInterval": 60
+  "updateInterval": 10,
+  "enableProxyProtocol": false
 }
 
 

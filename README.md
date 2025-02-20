@@ -71,16 +71,17 @@ chmod 777 /etc/ForwardOptimal/ForwardOptimal
 ```
 cat > /etc/ForwardOptimal/config.json << EOF
 {
-  "bindAddr": "[::]:55555",
+  "bindAddr": "[::]:8080",
   "targets": [
-    "1.1.1.1:80",
-    "6.6.6.6:22",
-    "[2a00:0000:1234:1::a]:65535",
-    "[2a00:1111:6666:1::1111]:80"
+    "[2401:1111:1::1111:1122]:3389",
+    "[2400:c123:11:2222::1]:8443",
+    "[2400:8888:888:8::8]:443"
   ],
-   "updateInterval": 60，
-   "enableProxyProtocol": false
-} 
+  "updateInterval": 60,
+  "enableProxyProtocol": true
+}
+
+
 EOF
 ```
 

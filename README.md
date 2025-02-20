@@ -78,7 +78,7 @@ cat > /etc/ForwardOptimal/config.json << EOF
     "[2400:8888:888:8::8]:443"
   ],
   "updateInterval": 60,
-  "enableProxyProtocol": true
+  "enableProxyProtocol": false
 }
 
 

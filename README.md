@@ -47,15 +47,15 @@ Releases 中的是 二进制文件，AMD架构的，其他架构自行编译
 
 
 
-
+.....
+.
+.
+.
+.....
 ## 补充 快速使用：
-.
-.
-.
-.
+
 #### 下载
 
-```
 mkdir /etc/ForwardOptimal/
 curl -o /etc/ForwardOptimal/ForwardOptimal https://github.com/yunbug/ForwardOptimal/releases/download/v1.2.0/ForwardOptimal
 chmod 777 /etc/ForwardOptimal/ForwardOptimal

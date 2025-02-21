@@ -1,5 +1,5 @@
 # config.json 配置说明
-
+```
 {
     "bindAddr": ":8080",
     "targets": [
@@ -11,7 +11,7 @@
     "updateInterval": 60,
     "proxyProtocol": ""
 }
-
+```
 
 ### bindAddr: 
   ##### 监听地址，格式为 ":端口" 或 "IP地址:端口"。例如 ":8080" 表示监听所有 IP 地址的 8080 端口。

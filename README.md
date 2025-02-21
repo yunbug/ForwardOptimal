@@ -27,7 +27,7 @@ ForwardOptimal是一个TCP转发工具，在首次启动后会对所有目标列
 #### config.json文件 简单介绍
 
 
-config.md
+[前往 config.md](https://github.com/yunbug/ForwardOptimal/blob/main/config.md)
 
 
 

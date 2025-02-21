@@ -27,16 +27,7 @@ ForwardOptimal是一个TCP转发工具，在首次启动后会对所有目标列
 #### config.json文件 简单介绍
 
 
-bindAddr 是绑定的端口（可以设置为[::] 或 0.0.0.0 这个不用多说了）
-
-targets 转发列表目标
-
-updateInterval 是每隔多久执行一次延迟检查（重新寻找最佳延迟的目标）
-##### updateInterval 不建议修改太小
-
-"enableProxyProtocol": false
-##### enableProxyProtocol 是 ProxyProtocol v2 是否开启，默认为 false ,禁用 ProxyProtocol 协议
-如需要开启直接设置true即可，不懂不要管，它必须对端能接受，不然无用！！！
+config.md
 
 
 

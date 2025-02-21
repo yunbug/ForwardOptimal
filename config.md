@@ -22,6 +22,6 @@
 ### updateInterval: 
   ##### 更新最优目标的间隔，单位为秒。程序会定期测量 targets 列表中服务器的延迟，并选择延迟最低的作为最优目标。例如 "60" 表示每 60 秒更新一次。
 
-### proxyProtocol: 
-  #### Proxy Protocol 版本，可选值为 "v1"、"v2" 或 "" (空字符串，表示禁用 Proxy Protocol)。 Proxy Protocol 用于将客户端的真实 IP 地址传递给目标服务器。 v1 和 v2 是不同的协议版本，需要目标服务器支持相应的版本才能正确解析。
-  ### 不懂不要填！！！
+### proxyProtocol （不懂不要填！！！）: 
+  #### Proxy Protocol 版本，可选值为 "v1"、"v2" 或 "" (空字符串，表示禁用 Proxy Protocol)。 Proxy Protocol 用
+  ##### 于将客户端的真实 IP 地址传递给目标服务器。 v1 和 v2 是不同的协议版本，需要目标服务器支持相应的版本才能正确解析，并不支持接受，只能生成发送。

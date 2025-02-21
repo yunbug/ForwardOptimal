@@ -49,7 +49,10 @@ Releases 中的是 二进制文件，AMD架构的，其他架构自行编译
 
 
 ## 补充 快速使用：
-
+.
+.
+.
+.
 #### 下载
 
 ```
@@ -62,16 +65,16 @@ chmod 777 /etc/ForwardOptimal/ForwardOptimal
 ```
 cat > /etc/ForwardOptimal/config.json << EOF
 {
-  "bindAddr": "[::]:8080",
-  "targets": [
-    "[2401:1111:1::1111:1122]:3389",
-    "[2400:c123:11:2222::1]:8443",
-    "[2400:8888:888:8::8]:443"
-  ],
-  "updateInterval": 60,
-  "enableProxyProtocol": false
+    "bindAddr": ":8080",
+    "targets": [
+        "23.255.255.255:53",
+        "66.20.21.11:3389"
+        "[2401:1111:1::1111:1122]:3389"
+        "[2401:2222:2::2222:3333]:80"
+    ],
+    "updateInterval": 60,
+    "proxyProtocol": "v2"
 }
-
 
 EOF
 ```

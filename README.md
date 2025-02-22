@@ -87,7 +87,7 @@ EOF
 
 #### 进程守护
 ```
-#(可选) curl -o /etc/systemd/system/ForwardOptimal.service https://github.com/yunbug/ForwardOptimal/blob/main/ForwardOptimal.service
+#(可选) curl -o /etc/systemd/system/ForwardOptimal.service https://raw.githubusercontent.com/yunbug/ForwardOptimal/refs/heads/main/ForwardOptimal.service
 ```
 
 ```

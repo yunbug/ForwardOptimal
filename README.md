@@ -127,3 +127,9 @@ sudo systemctl status ForwardOptimal.service
 systemctl enable ForwardOptimal
 
 ```
+
+#### 注意，每次修改配置文件都需要重启
+```
+systemctl restart ForwardOptimal
+```
+

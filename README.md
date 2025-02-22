@@ -86,8 +86,9 @@ EOF
 下面是一些简单的守护
 
 #### 进程守护
-
-#(可选)curl -o /etc/systemd/system/ForwardOptimal.service https://github.com/yunbug/ForwardOptimal/blob/main/ForwardOptimal.service
+```
+#(可选) curl -o /etc/systemd/system/ForwardOptimal.service https://github.com/yunbug/ForwardOptimal/blob/main/ForwardOptimal.service
+```
 
 ```
 echo ' 

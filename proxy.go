@@ -152,18 +152,27 @@ func getProxyProtocol(version string) ProxyProtocol {
 
 // 流量转发
 func forwardTCP(conn net.Conn, proxyProtocol ProxyProtocol) {
-    mu.Lock()
-    target := bestTarget
-    mu.Unlock()
+	mu.Lock()
+	target := bestTarget
+	mu.Unlock()
 
-    pool := getOrCreatePool(target)
-    targetConn, err := pool.Get()
-    if err != nil {
-        log.Printf("无法从连接池获取目标连接 %s: %v", target, err)
-        conn.Close()
-        return
-    }
-    defer pool.Put(targetConn)
+	// 检查是否有可用的健康节点
+	if target == "" {
+		log.Printf("🚫 拒绝连接: 所有节点都失败 (来源: %s)", conn.RemoteAddr())
+		conn.Close()
+		return
+	}
+
+	pool := getOrCreatePool(target)
+	targetConn, err := pool.Get()
+	if err != nil {
+		log.Printf("❌ 连接失败: 无法获取目标连接 %s (错误: %v)", target, err)
+		conn.Close()
+		return
+	}
+	
+	log.Printf("🔗 新连接建立: %s -> %s", conn.RemoteAddr(), target)
+	defer pool.Put(targetConn)
 
     targetConn.SetDeadline(time.Now().Add(30 * time.Second))
     conn.SetDeadline(time.Now().Add(30 * time.Second))

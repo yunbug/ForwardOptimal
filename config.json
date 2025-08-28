@@ -7,5 +7,6 @@
         "[2401:2222:2::2222:3333]:80"
     ],
     "updateInterval": 60,
+    "failureInterval": 10,
     "proxyProtocol": "v2"
 }

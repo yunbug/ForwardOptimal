@@ -18,24 +18,24 @@ ForwardOptimal是一个TCP转发工具，在首次启动后会对所有目标列
 
 ## 使用：
 ### 运行方法：
+
    ./ForwardOptimal [您的文件路径]
    例子 ： ./ForwardOptimal /etc/ForwardOptimal/config.json
 
    如果不设置路径，那么默认会使用config.json
 
 
-用法:
-  ./ForwardOptimal [选项]
 
 选项:
-  -c <文件路径>    指定配置文件路径 (默认: config.json)
-  -h, -help       显示此帮助信息
-  -v, -version    显示版本信息
+-c <文件路径>指定配置文件路径 (默认: config.json)
+-h, -help显示此帮助信息
+-v, -version显示版本信息
+
 
 示例:
-  ./ForwardOptimal                           # 使用默认配置文件 config.json
-  ./ForwardOptimal -c /root/a.json          # 使用指定的配置文件
-  ./ForwardOptimal -c ./configs/prod.json   # 使用相对路径配置文件
+./ForwardOptimal # 使用默认配置文件 config.json
+./ForwardOptimal -c /root/a.json # 使用指定的配置文件
+./ForwardOptimal -c ./configs/prod.json # 使用相对路径配置文件
 
 
 
